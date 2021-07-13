@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import view.ModeleController?>
+<SplitPane dividerPositions="0.5" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="view.FenetrePrincipale"
+           prefHeight="300.0" prefWidth="700.0">
+    <items>
+        <Button onAction="#clicAjouterController" text="Ajouter controller" fx:id="btnAjouter"/>
+        <ScrollPane>
+            <content>
+                <VBox fx:id="vBox" >
+                    <ModeleController label="Mon controller 1"/>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </items>
+</SplitPane>

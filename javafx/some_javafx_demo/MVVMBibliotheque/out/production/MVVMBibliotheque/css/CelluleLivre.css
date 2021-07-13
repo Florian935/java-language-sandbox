@@ -1,0 +1,15 @@
+HBox {
+    -fx-spacing: 5;
+    -fx-alignment: center-left;
+}
+
+Label {
+    -fx-font-size: 13;
+    -fx-padding: 0 0 0 5;
+}
+
+.cellule:hover, Label:hover,.cellule:focused, .cellule:pressed, .cellule:focused Label:focused, .cellule:pressed Label:pressed, Label:focused, Label:pressed {
+    -fx-background-color: #3d3d3d;
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+}

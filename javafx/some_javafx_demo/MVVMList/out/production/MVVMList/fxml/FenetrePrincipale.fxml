@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <left>
+        <VBox>
+            <ListView fx:id="listViewEtudiant"/>
+            <HBox>
+                <Button text="Ajouter un etudiant" onAction="#clicAjouterEtudiant"/>
+                <Button text="Supprimer un etudiant" onAction="#clicSupprimerEtudiant"/>
+            </HBox>
+        </VBox>
+    </left>
+    <right>
+        <VBox>
+        <TextField fx:id="textField"/>
+            <Button text="Deselectionner" onAction="#clicDeselectionner"/>
+        </VBox>
+    </right>
+    <bottom>
+        <Button text="Quitter" onAction="#clicQuitter"/>
+    </bottom>
+</BorderPane>
+

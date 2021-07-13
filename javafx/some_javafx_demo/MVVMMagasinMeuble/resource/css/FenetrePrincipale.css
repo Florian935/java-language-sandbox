@@ -1,0 +1,15 @@
+.container-bouton {
+    -fx-spacing: 5px;
+    -fx-padding: 10 0 3 3;
+}
+
+.label-liste-meuble {
+    -fx-text-fill: blue;
+    -fx-font-size: 20px;
+    -fx-padding: 5px;
+}
+
+.container-changer-couleur {
+    -fx-padding: 10;
+    -fx-alignment: top-left;
+}

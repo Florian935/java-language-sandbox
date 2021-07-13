@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.Integer?>
+<SplitPane dividerPositions="0.4" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <fx:define>
+        <Integer fx:id="moins1" fx:value="-1"/>
+    </fx:define>
+    <VBox>
+        <VBox>
+            <ListView fx:id="listViewVetements" prefWidth="310"/>
+        </VBox>
+        <HBox>
+            <Button text="Déselectionner" onAction="#clicDeselectionnerVetement"
+                    disable="${listViewVetements.selectionModel.selectedIndex == moins1}"/>
+            <Button text="Supprimer vetement" onAction="#clicSupprimerVetement"
+                    disable="${listViewVetements.selectionModel.selectedIndex == moins1}"/>
+        </HBox>
+        <HBox alignment="CENTER">
+            <Label text="Ajouter / réduire la quantité: "/>
+            <Button text="+" onAction="#clicAjouterQuantite"
+                    disable="${listViewVetements.selectionModel.selectedIndex == moins1}"/>
+            <Button text="-" onAction="#clicEnleverQuantite"
+                    disable="${listViewVetements.selectionModel.selectedIndex == moins1}"/>
+        </HBox>
+        <HBox>
+            <Button text="Ajouter vêtement" onAction="#clicAjouterVetement"/>
+            <Button text="Quitter" onAction="#clicQuitter"/>
+        </HBox>
+    </VBox>
+    <BorderPane>
+        <top>
+            <HBox>
+                <Label text="Label du vêtement: "/>
+                <Label fx:id="labelVetement"/>
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+            </HBox>
+        </top>
+        <bottom>
+            <VBox>
+                <ListView fx:id="listViewCouleurs"/>
+                <HBox>
+                    <ColorPicker fx:id="colorPicker"
+                                 disable="${listViewCouleurs.selectionModel.selectedIndex == moins1}"/>
+                    <Button text="Déselectionner couleur" onAction="#clicDeselectionnerCouleur"
+                            disable="${listViewCouleurs.selectionModel.selectedIndex == moins1}"/>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <Button text="Ajouter couleur" onAction="#clicAjouterCouleur"
+                            disable="${listViewVetements.selectionModel.selectedIndex == moins1}"/>
+                    <Button text="Supprimer couleur" onAction="#clicSupprimerCouleur"
+                            disable="${listViewCouleurs.selectionModel.selectedIndex == moins1}"/>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </padding>
+                </HBox>
+                <HBox>
+                    <Label text="Stock total: "/>
+                    <Label fx:id="labelStockTotal"/>
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+</SplitPane>

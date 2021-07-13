@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.FenetrePrincipale">
+    <fx:define>
+        <Integer fx:value="-1" fx:id="moins1"></Integer>
+    </fx:define>
+    <left>
+        <ListView fx:id="listView"/>
+    </left>
+    <right>
+        <HBox>
+            <TextField disable="${listView.selectionModel.selectedIndex == moins1}" fx:id="txtField1"/>
+            <TextField disable="${listView.selectionModel.selectedIndex == moins1}" fx:id="txtField2"/>
+        </HBox>
+    </right>
+    <bottom>
+        <Button fx:id="btnAjouter" onAction="#ajouterEtudiant" text="Ajouter étudiant"/>
+    </bottom>
+</BorderPane>

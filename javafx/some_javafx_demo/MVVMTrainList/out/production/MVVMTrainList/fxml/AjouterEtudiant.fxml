@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <HBox>
+            <Label text="Nom: "/>
+            <TextField fx:id="textFieldNom"/>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox>
+            <Button text="Ajouter" onAction="#clicAjouterEtudiant"/>
+            <Button text="Annuler" onAction="#clicAnnuler"/>
+        </HBox>
+    </bottom>
+</BorderPane>

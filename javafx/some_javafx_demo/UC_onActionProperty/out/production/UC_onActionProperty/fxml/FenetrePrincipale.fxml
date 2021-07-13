@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import view.uc.*?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <TextField fx:id="textField" text="Coucou"/>
+    </top>
+    <bottom>
+        <HBox>
+            <Bordereau btnB1="${textField.text}" btnB2="${textField.text}" onActionB1="#clicB1" onActionB2="#clicB2"/>
+        </HBox>
+    </bottom>
+</BorderPane>

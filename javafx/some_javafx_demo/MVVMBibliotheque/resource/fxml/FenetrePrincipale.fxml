@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import view.uc.BoutonAction?>
+<?import java.lang.Integer?>
+<SplitPane dividerPositions="0.5" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Integer fx:id="moins1" fx:value="-1"/>
+    </fx:define>
+    <BorderPane>
+        <top>
+            <VBox styleClass="container-liste-livre">
+                <Label styleClass="titre" text="Liste des livres: "/>
+                <ListView fx:id="listViewLivre"/>
+            </VBox>
+        </top>
+        <bottom>
+            <VBox>
+                <BoutonAction disable="${listViewLivre.selectionModel.selectedIndex == moins1}" onActionBtnAjouter="#clicDeselectionnerLivre" textBtnAjouter="Déselectionner"/>
+                <HBox styleClass="container-bouton-bottom">
+                    <BoutonAction onActionBtnAjouter="#clicAjouterLivre" textBtnAjouter="Ajouter livre..."/>
+                    <BoutonAction disable="${listViewLivre.selectionModel.selectedIndex == moins1}" onActionBtnAjouter="#clicSupprimerLivre" textBtnAjouter="Supprimer"/>
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+    <BorderPane>
+        <left>
+            <VBox>
+                <HBox styleClass="container-changement-titre" alignment="CENTER_LEFT">
+                    <Label styleClass="titre" text="Titre du livre: "/>
+                    <TextField fx:id="textFieldTitre"/>
+                </HBox>
+                <VBox>
+                    <ListView fx:id="listViewCouleur"/>
+                </VBox>
+            </VBox>
+        </left>
+        <right>
+            <VBox styleClass="container-changement-couleur">
+                <Label text="Changer la couleur: "/>
+                <ColorPicker fx:id="colorPicker" disable="${listViewCouleur.selectionModel.selectedIndex == moins1}"/>
+            </VBox>
+        </right>
+        <bottom>
+            <VBox>
+                <BoutonAction disable="${listViewCouleur.selectionModel.selectedIndex == moins1}" onActionBtnAjouter="#clicDeselectionnerCouleur" textBtnAjouter="Déselectionner"/>
+                <HBox styleClass="container-bouton-bottom">
+                    <BoutonAction disable="${listViewLivre.selectionModel.selectedIndex == moins1}" onActionBtnAjouter="#clicBtnAjouterCouleur" textBtnAjouter="Ajouter couleur..."/>
+                    <BoutonAction disable="${listViewCouleur.selectionModel.selectedIndex == moins1}" onActionBtnAjouter="#clicBtnSupprimerCouleur" textBtnAjouter="Supprimer"/>
+                    <BoutonAction styleClass="bouton-quitter" onActionBtnAjouter="#clicBtnQuitter" textBtnAjouter="Quitter"/>
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+</SplitPane>

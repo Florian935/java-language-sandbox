@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <ListView fx:id="listView"/>
+        <BorderPane>
+            <left>
+                <TextField fx:id="textField"/>
+            </left>
+            <bottom>
+                <VBox>
+                    <HBox>
+                        <Button text="Ajouter un étudiant" onAction="#clicAjouterEtudiant"/>
+                        <Button text="Supprimer un étudiant" onAction="#clicSupprimerEtudiant"/>
+                    </HBox>
+                    <HBox>
+                        <Button text="Déselectionner" onAction="#clicDeselectionner"/>
+                        <Button text="Supprimer un étudiant" onAction="#clicSupprimerEtudiant"/>
+                        <Button text="Quitter" onAction="#clicQuitter"/>
+                    </HBox>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </items>
+</SplitPane>

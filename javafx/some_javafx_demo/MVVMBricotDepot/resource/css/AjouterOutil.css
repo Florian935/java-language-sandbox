@@ -1,0 +1,16 @@
+BorderPane, HBox {
+    -fx-padding: 10;
+}
+
+HBox {
+    -fx-alignment: center-left;
+}
+
+Label {
+    -fx-font-size: 13px;
+    -fx-padding: 5;
+}
+
+.container-bouton {
+    -fx-alignment: center;
+}

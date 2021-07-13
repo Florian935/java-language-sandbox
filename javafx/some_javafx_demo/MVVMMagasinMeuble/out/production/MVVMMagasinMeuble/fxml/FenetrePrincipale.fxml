@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import view.uc.UCBoutonAjouter?>
+<?import java.lang.Integer?>
+<SplitPane dividerPositions="0.45" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Integer fx:value="-1" fx:id="moins1"/>
+    </fx:define>
+    <BorderPane>
+        <top>
+            <VBox>
+                <Label styleClass="label-liste-meuble" text="Liste des meubles"/>
+                <ListView fx:id="listViewMeuble"/>
+            </VBox>
+        </top>
+        <bottom>
+            <HBox styleClass="container-bouton">
+                <UCBoutonAjouter textBoutonAjouter="Ajouter meuble..." onActionBoutonAjouter="#clicBoutonAjouter"/>
+            </HBox>
+        </bottom>
+    </BorderPane>
+    <BorderPane>
+        <left>
+            <VBox>
+                <HBox alignment="CENTER">
+                    <Label text="Nom du meuble: ">
+                        <HBox.margin>
+                            <Insets top="10.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <TextField fx:id="textFieldNom" disable="${listViewMeuble.selectionModel.selectedIndex == moins1}">
+                        <HBox.margin>
+                            <Insets left="5.0" top="10.0"/>
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+                <VBox>
+                    <ListView fx:id="listViewCouleur"/>
+                </VBox>
+            </VBox>
+        </left>
+        <right>
+            <VBox styleClass="container-changer-couleur">
+                <Label text="Changer la couleur:">
+                    <VBox.margin>
+                        <Insets top="5" bottom="5" right="5" left="5"/>
+                    </VBox.margin>
+                </Label>
+                <ColorPicker fx:id="colorPicker" disable="${listViewMeuble.selectionModel.selectedIndex == moins1}"/>
+            </VBox>
+        </right>
+        <bottom>
+            <HBox styleClass="container-bouton">
+                <UCBoutonAjouter textBoutonAjouter="Ajouter couleur..."/>
+            </HBox>
+        </bottom>
+    </BorderPane>
+</SplitPane>

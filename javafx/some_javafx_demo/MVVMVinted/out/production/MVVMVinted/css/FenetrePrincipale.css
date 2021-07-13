@@ -1,0 +1,50 @@
+SplitPane {
+    -fx-background-color: white;
+    -fx-padding: 2;
+    -fx-spacing: 3;
+}
+
+TextField {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+ListView:hover {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+BorderPane {
+    -fx-padding:  0 10;
+}
+
+.container-uc-bouton {
+    -fx-padding:  5 0 0 0;
+}
+
+.bouton-quitter {
+    -fx-padding: 0 0 0 205;
+}
+
+.container-image {
+    -fx-padding: 5;
+}
+
+.container-color {
+    -fx-padding: 150 0 0 8;
+}
+
+.titre {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.titre-couleur {
+    -fx-font-size: 14;
+    -fx-padding: 0 0 5;
+}
+
+.container-titre {
+    -fx-padding: 5;
+    -fx-spacing: 4;
+}

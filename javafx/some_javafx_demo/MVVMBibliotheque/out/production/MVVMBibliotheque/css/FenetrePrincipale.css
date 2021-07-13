@@ -1,0 +1,52 @@
+SplitPane {
+    -fx-background-color: white;
+}
+
+ListView:hover {
+    -fx-border-width: 2;
+}
+
+TextField {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+}
+
+BorderPane {
+    -fx-padding: 10;
+}
+
+.bouton-quitter {
+    -fx-padding: 0 0 0 90;
+}
+
+.container-changement-couleur {
+    -fx-padding: 8 0 8 8;
+    -fx-spacing: 6;
+}
+
+.container-changement-couleur > Label {
+    -fx-font-size: 16;
+}
+
+ListView, TextField, ColorPicker {
+    -fx-border-color: black;
+}
+
+.container-changement-titre {
+    -fx-spacing: 6;
+    -fx-padding: 8 0;
+}
+
+.container-liste-livre {
+    -fx-spacing: 6;
+    -fx-padding: 8 0;
+}
+
+.container-bouton-bottom {
+    -fx-spacing: 8;
+}
+
+.titre {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}

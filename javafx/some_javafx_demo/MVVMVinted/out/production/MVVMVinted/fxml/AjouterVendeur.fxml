@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import view.uc.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox>
+            <HBox>
+                <Label text="Pseudo:"/>
+                <TextField fx:id="textFieldPseudo"/>
+            </HBox>
+            <HBox>
+                <Label text="Nombre vente:"/>
+                <TextField fx:id="textFieldNbVente"/>
+            </HBox>
+            <HBox>
+                <Label text="Note:"/>
+                <TextField fx:id="textFieldNote"/>
+            </HBox>
+            <HBox>
+                <Label text="Statut du vendeur: "/>
+                <ComboBox fx:id="comboBox"/>
+            </HBox>
+        </VBox>
+    </top>
+    <bottom>
+        <HBox styleClass="container-bouton">
+            <UCBouton onActionBtnUC="#clicAjouter" textBtnUC="Ajouter"/>
+            <UCBouton onActionBtnUC="#clicAnnuler" textBtnUC="Annuler"/>
+        </HBox>
+    </bottom>
+</BorderPane>

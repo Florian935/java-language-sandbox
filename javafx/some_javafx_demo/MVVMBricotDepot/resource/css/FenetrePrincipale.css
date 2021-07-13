@@ -1,0 +1,50 @@
+SplitPane {
+    -fx-background-color: white;
+    -fx-padding: 6;
+}
+
+BorderPane {
+    -fx-spacing: 10;
+    -fx-padding: 0 10;
+}
+
+ListView {
+    -fx-border-color: black;
+}
+
+ListView:hover {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.container-image-view {
+    -fx-alignment: center;
+    -fx-padding: 5;
+}
+
+.quitter {
+    -fx-padding: 0 0 0 200;
+}
+
+.deselectionner {
+    -fx-padding: 12 0 0 0;
+}
+
+TextField {
+    -fx-font-size: 12;
+}
+
+.container-color-picker {
+    -fx-padding: 0 6 112 10;
+    -fx-alignment: center;
+}
+
+HBox {
+    -fx-alignment: center-left;
+}
+
+.label-titre {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-padding: 5;
+}

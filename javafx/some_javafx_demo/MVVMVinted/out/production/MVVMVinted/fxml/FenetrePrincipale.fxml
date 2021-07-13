@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ColorPicker?>
+<?import view.uc.*?>
+<?import java.lang.Integer?>
+<?import javafx.scene.image.ImageView?>
+<SplitPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Integer fx:id="moins1" fx:value="-1"/>
+    </fx:define>
+    <BorderPane>
+        <top>
+            <VBox>
+                <VBox styleClass="container-titre" alignment="CENTER_LEFT">
+                    <Label styleClass="titre" text="Liste des vendeurs:"/>
+                    <ListView fx:id="listViewVendeur"/>
+                </VBox>
+            </VBox>
+        </top>
+        <bottom>
+            <VBox styleClass="container-uc-bouton">
+                <UCBouton textBtnUC="Déselectionner" onActionBtnUC="#clicDeselectionnerVendeur" disable="${listViewVendeur.selectionModel.selectedIndex == moins1}"/>
+                <HBox>
+                    <UCBouton textBtnUC="Ajouter vendeur..." onActionBtnUC="#clicAjouterVendeur"/>
+                    <UCBouton textBtnUC="Supprimer" onActionBtnUC="#clicSupprimerVendeur" disable="${listViewVendeur.selectionModel.selectedIndex == moins1}"/>
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+    <BorderPane>
+        <left>
+            <VBox>
+                <HBox styleClass="container-titre" alignment="CENTER_LEFT">
+                    <Label styleClass="titre" text="Ventes du vendeur: "/>
+                    <TextField fx:id="textFieldPseudo"/>
+                </HBox>
+                <HBox styleClass="container-image" alignment="CENTER">
+                    <ImageView fx:id="imageView"/>
+                </HBox>
+                <ListView fx:id="listViewVetement"/>
+            </VBox>
+        </left>
+        <right>
+            <VBox styleClass="container-color">
+                <Label styleClass="titre-couleur" text="Changer la couleur:"/>
+                <ColorPicker fx:id="colorPicker"/>
+            </VBox>
+        </right>
+        <bottom>
+            <VBox styleClass="container-uc-bouton">
+                <UCBouton textBtnUC="Déselectionner" onActionBtnUC="#clicDeselectionnerVetement" disable="${listViewVetement.selectionModel.selectedIndex == moins1}"/>
+                <HBox>
+                    <UCBouton textBtnUC="Ajouter vêtement..." onActionBtnUC="#clicAjouterVetement" disable="${listViewVendeur.selectionModel.selectedIndex == moins1}"/>
+                    <UCBouton textBtnUC="Supprimer" onActionBtnUC="#clicSupprimerVetement" disable="${listViewVetement.selectionModel.selectedIndex == moins1}"/>
+                    <UCBouton styleClass="bouton-quitter" textBtnUC="Quitter" onActionBtnUC="#clicQuitter"/>
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+</SplitPane>

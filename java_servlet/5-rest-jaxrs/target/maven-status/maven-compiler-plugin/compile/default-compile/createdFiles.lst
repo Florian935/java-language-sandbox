@@ -1,0 +1,6 @@
+com\tp5\tp5\rest\jaxrs\JAXRSConfiguration.class
+com\tp5\tp5\rest\jaxrs\utils\ArrayUtils.class
+com\tp5\tp5\rest\jaxrs\entity\Article.class
+com\tp5\tp5\rest\jaxrs\controller\ArticleController.class
+com\tp5\tp5\rest\jaxrs\resources\JavaEE8Resource.class
+com\tp5\tp5\rest\jaxrs\service\ArticleService.class

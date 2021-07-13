@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import view.uc.*?>
+<?import java.lang.Integer?>
+<SplitPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Integer fx:id="moins1" fx:value="-1"/>
+    </fx:define>
+    <BorderPane>
+        <top>
+            <VBox>
+                <Label styleClass="label-titre" text="Catalogue des outils: "/>
+                <ListView fx:id="listViewOutils"/>
+            </VBox>
+        </top>
+        <bottom>
+            <VBox>
+                <UCBouton styleClass="deselectionner" onActionBtnUC="#clicDeselectionnerOutil" disable="${listViewOutils.selectionModel.selectedIndex == moins1}" textBtnUC="Déselectionner"/>
+                <HBox>
+                    <UCBouton onActionBtnUC="#clicAjouterOutil" textBtnUC="Ajouter outil..."/>
+                    <UCBouton onActionBtnUC="#clicSupprimerOutil" disable="${listViewOutils.selectionModel.selectedIndex == moins1}" textBtnUC="Supprimer"/>
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+    <BorderPane>
+        <left>
+            <VBox>
+                <HBox>
+                    <Label styleClass="label-titre" text="Détails de l'outil:"/>
+                    <TextField fx:id="textFieldNom"/>
+                </HBox>
+                <VBox>
+                    <HBox styleClass="container-image-view">
+                        <ImageView fx:id="imageView"/>
+                    </HBox>
+                    <ListView fx:id="listViewCouleur"/>
+                </VBox>
+            </VBox>
+        </left>
+        <right>
+            <VBox styleClass="container-color-picker">
+                <VBox>
+                    <Label styleClass="label-titre" text="Changer la couleur:"/>
+                    <ColorPicker fx:id="colorPicker"/>
+                </VBox>
+            </VBox>
+        </right>
+        <bottom>
+            <VBox>
+                <UCBouton styleClass="deselectionner" onActionBtnUC="#clicDeselectionnerCouleur" disable="${listViewCouleur.selectionModel.selectedIndex == moins1}" textBtnUC="Déselectionner"/>
+                <HBox>
+                    <UCBouton onActionBtnUC="#clicAjouterCouleur" disable="${listViewOutils.selectionModel.selectedIndex == moins1}" textBtnUC="Ajouter couleur..."/>
+                    <UCBouton onActionBtnUC="#clicSupprimerCouleur" disable="${listViewCouleur.selectionModel.selectedIndex == moins1}" textBtnUC="Supprimer"/>
+                    <UCBouton styleClass="quitter" onActionBtnUC="#clicQuitter" textBtnUC="Quitter"/>
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+</SplitPane>

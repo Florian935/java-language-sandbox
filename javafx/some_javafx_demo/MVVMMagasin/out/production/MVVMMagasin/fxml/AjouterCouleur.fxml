@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox>
+            <VBox alignment="CENTER">
+                <Label fx:id="labelCouleur" text="Choisir la couleur à ajouter:">
+                    <VBox.margin>
+                        <Insets top="10.0" bottom="10.0"/>
+                    </VBox.margin>
+                </Label>
+                <ColorPicker fx:id="colorPicker"/>
+                <VBox.margin>
+                    <Insets right="20.0" left="20.0"/>
+                </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER">
+                <Button defaultButton="true" onAction="#clicAjouter" text="Ajouter">
+                    <HBox.margin>
+                        <Insets right="10.0" top="10.0" bottom="10.0" left="10.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button cancelButton="true" defaultButton="true" onAction="#clicAnnuler" text="Annuler">
+                    <HBox.margin>
+                        <Insets right="10.0" top="10.0" bottom="10.0" left="10.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

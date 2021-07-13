@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.layout.HBox?>
+<?import view.uc.UCBouton?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <Label text="Choisir la couleur:"/>
+        <ColorPicker fx:id="colorPicker"/>
+    </top>
+    <bottom>
+        <HBox styleClass="container-bouton" alignment="CENTER">
+            <UCBouton onActionBtnUC="#clicAjouter" textBtnUC="Valider"/>
+            <UCBouton onActionBtnUC="#clicAnnuler" textBtnUC="Annuler"/>
+        </HBox>
+    </bottom>
+</BorderPane>

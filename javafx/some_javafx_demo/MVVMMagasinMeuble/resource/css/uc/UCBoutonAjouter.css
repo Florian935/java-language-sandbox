@@ -1,0 +1,7 @@
+.bouton-ajouter {
+     -fx-padding: 5 22 5 22;
+     -fx-border-color: black;
+     -fx-border-width: 2;
+     -fx-font-size: 12px;
+     -fx-text-fill: black;
+}

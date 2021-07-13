@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane prefHeight="425.0" prefWidth="548.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FenetrePrincipale">
+
+    <ListView fx:id="listView"/>
+    <HBox fx:id="hbox">
+        <TextField fx:id="textField1"/>
+        <TextField fx:id="textField2"/>
+    </HBox>
+    <Button text="Ajouter un étudiant" fx:id="btnAjouterEtudiant" onAction="#clicAjouterEtudiant"/>
+</FlowPane>

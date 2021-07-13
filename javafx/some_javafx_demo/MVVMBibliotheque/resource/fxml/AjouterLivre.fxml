@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import view.uc.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox>
+            <HBox>
+                <Label text="Titre:"/>
+                <TextField fx:id="textFieldTitre"/>
+            </HBox>
+            <HBox>
+                <Label text="prix:"/>
+                <TextField fx:id="textFieldPrix"/>
+            </HBox>
+            <HBox>
+                <Label text="Nombre exemplaire:"/>
+                <TextField fx:id="textFieldExemplaire"/>
+            </HBox>
+            <HBox>
+                <Label text="Type de livre:"/>
+                <ComboBox fx:id="comboBoxType"/>
+            </HBox>
+        </VBox>
+    </top>
+    <bottom>
+        <HBox styleClass="container-bouton">
+            <BoutonAction onActionBtnAjouter="#clicAjouter" textBtnAjouter="Ajouter"/>
+            <BoutonAction onActionBtnAjouter="#clicAnnuler" textBtnAjouter="Annuler"/>
+        </HBox>
+    </bottom>
+</BorderPane>

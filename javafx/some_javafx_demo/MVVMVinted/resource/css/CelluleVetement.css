@@ -1,0 +1,8 @@
+Label {
+    -fx-padding: 0 3 0 0;
+    -fx-font-size: 13;
+}
+
+HBox {
+    -fx-alignment: center-left;
+}

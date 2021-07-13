@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="view.AjouterEtudiant">
+    <fx:define>
+        <String fx:value="" fx:id="vide"/>
+    </fx:define>
+    <center>
+        <VBox>
+            <HBox>
+                <Label text="Nom: "/>
+                <TextField fx:id="textField"/>
+            </HBox>
+            <HBox>
+                <Button text="Valider" defaultButton="true" onAction="#clicAjouter" disable="textField.text == vide"/>
+                <Button text="Annuler" cancelButton="true" onAction="#clicAnnuler"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

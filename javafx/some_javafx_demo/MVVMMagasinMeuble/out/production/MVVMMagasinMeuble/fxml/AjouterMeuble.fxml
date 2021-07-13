@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox styleClass="container-ajouter-meuble">
+            <Label text="Nom meuble: "/>
+            <TextField fx:id="textFieldMeuble"/>
+            <Label text="Etat: "/>
+            <ComboBox fx:id="comboBoxEtat"/>
+            <Label text="Quantité: "/>
+            <TextField fx:id="textFieldQuantite"/>
+            <Label text="Prix: "/>
+            <TextField fx:id="textFieldPrix"/>
+            <HBox styleClass="container-bouton" alignment="CENTER" spacing="20">
+                <Button text="Valider" defaultButton="true" onAction="#clicAjouter"/>
+                <Button text="Annuler" cancelButton="true" onAction="#clicAnnuler"/>
+            </HBox>
+        </VBox>
+    </top>
+</BorderPane>

@@ -1,0 +1,10 @@
+.container-ajouter-meuble {
+    -fx-padding: 15;
+    -fx-spacing: 5;
+}
+
+.container-bouton {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-padding: 13;
+}

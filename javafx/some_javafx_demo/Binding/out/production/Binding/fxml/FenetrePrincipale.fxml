@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.FenetrePrincipale">
+    <top>
+        <HBox>
+            <TextField fx:id="txtFieldBtn" text=""/>
+            <Button onAction="#clicSuivant" disable="${txtFieldBtn.text == 'coucou'}" text="${txtFieldBtn.text}"/>
+            <TextField text="${txtFieldBtn.text}"/>
+        </HBox>
+    </top>
+    <left>
+        <Button text="&lt;" onAction="#clicPrecedent"/>
+    </left>
+    <center>
+        <TextField fx:id="textField1"/>
+    </center>
+    <right>
+        <Button text="&gt;" onAction="#clicSuivant"/>
+    </right>
+    <bottom>
+        <TextField fx:id="textField2"/>
+    </bottom>
+</BorderPane>

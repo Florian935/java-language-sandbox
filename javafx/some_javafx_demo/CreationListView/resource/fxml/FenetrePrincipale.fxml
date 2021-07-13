@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.FenetrePrincipale"
+            prefHeight="400">
+    <left>
+        <ListView fx:id="listView"/>
+    </left>
+    <right>
+        <HBox>
+            <TextField fx:id="textFieldNom"/>
+            <TextField fx:id="textFieldPseudo"/>
+        </HBox>
+    </right>
+    <bottom>
+        <Button text="Ajouter étudiant" onAction="#clicAjouterJoueur" fx:id="btnAjouterEtudiant"/>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,10 @@
+Button {
+    -fx-background-color: #383838;
+    -fx-border-color: black;
+    -fx-padding: 5 15 5 15;
+    -fx-text-fill: white;
+}
+
+HBox {
+    -fx-padding: 4;
+}

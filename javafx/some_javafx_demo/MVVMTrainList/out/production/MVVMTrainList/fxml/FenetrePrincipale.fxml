@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.4" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <ListView fx:id="listView"/>
+        <BorderPane>
+            <left>
+                <TextField fx:id="textField"/>
+            </left>
+            <bottom>
+                <Button text="Ajouter etudiant" onAction="#clicAjouter"/>
+            </bottom>
+        </BorderPane>
+    </items>
+</SplitPane>

@@ -1,0 +1,17 @@
+HBox {
+    -fx-padding: 15 0 0 0;
+    -fx-spacing: 15;
+}
+
+Button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: black;
+    -fx-font-size: 12;
+    -fx-border-width: 1;
+    -fx-background-color: #3d3d3d;
+    -fx-text-fill: white;
+}
+Button:disabled {
+    -fx-background-color: #eeeeee;
+    -fx-text-fill: black;
+}

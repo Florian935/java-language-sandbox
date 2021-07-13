@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.Integer?>
+<FlowPane prefHeight="400.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/11.0.1"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FenetrePrincipale">
+    <fx:define>
+        <Integer fx:id="moins1" fx:value="-1"/>
+    </fx:define>
+    <TreeView fx:id="treeView" prefHeight="400.0" prefWidth="229.0"/>
+    <HBox prefHeight="400.0" prefWidth="205.0">
+        <children>
+            <TextField fx:id="textFieldTree" disable="${treeView.selectionModel.selectedIndex == moins1}"/>
+            <Button fx:id="btnAjouter" onAction="#clicAjouterTree" text="Ajouter"/>
+        </children>
+    </HBox>
+    <HBox>
+        <TextField fx:id="textFieldComboNom"/>
+        <TextField fx:id="textFieldComboPrenom"/>
+        <ComboBox fx:id="comboBox"/>
+        <Button onAction="#clicAjouterCombo" text="Ajouter"/>
+        <Button text="Supprimer combo" onAction="#clicSupprimerCombo"/>
+    </HBox>
+    <HBox>
+        <TableView fx:id="tableView"/>
+        <Button text="Ajouter" onAction="#clicAjouterTable"/>
+        <TextField fx:id="textFieldTableNom"/>
+        <TextField fx:id="textFieldTablePrenom"/>
+        <Button text="Supprimer table" onAction="#clicSupprimerTable"/>
+    </HBox>
+</FlowPane>

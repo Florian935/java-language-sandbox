@@ -1,0 +1,6 @@
+com\tp5\tp5jpa\servlet\DataServlet.class
+com\tp5\tp5jpa\config\DataService.class
+com\tp5\tp5jpa\entity\Category.class
+com\tp5\tp5jpa\JAXRSConfiguration.class
+com\tp5\tp5jpa\entity\Item.class
+com\tp5\tp5jpa\resources\JavaEE8Resource.class

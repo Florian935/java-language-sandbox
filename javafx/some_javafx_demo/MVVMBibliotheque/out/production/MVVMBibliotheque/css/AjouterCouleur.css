@@ -1,0 +1,15 @@
+VBox {
+    -fx-alignment: center-left;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+Label {
+    -fx-font-size: 15px;
+}
+
+.container-bouton {
+    -fx-padding: 10;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
